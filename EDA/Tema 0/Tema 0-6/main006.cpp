@@ -40,6 +40,8 @@ bool resuelveCaso() {
     // escribir sol
     for (int num : sol) cout << num << " ";
     cout << "\n";
+
+    return true;
 }
 
 int main() {
