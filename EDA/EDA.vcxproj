@@ -137,9 +137,11 @@
     <None Include="Tema 0\Tema 0-5\1.in" />
     <None Include="Tema 0\Tema 0-6\1.ans" />
     <None Include="Tema 0\Tema 0-6\1.in" />
+    <None Include="Tema 0\Tema 0-7\1.ans" />
+    <None Include="Tema 0\Tema 0-7\1.in" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Tema 0\Tema 0-6\main006.cpp" />
+    <ClCompile Include="Tema 0\Tema 0-7\main007.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
