@@ -20,13 +20,14 @@ void resolver(vector<int>& datos) {
 // configuración, y escribiendo la respuesta
 bool resuelveCaso() {
     // leer los datos de la entrada
-    if (!std::cin)
-        return false;
-
     vector<int> datos;
     int numVec, aux;
 
     cin >> numVec;
+
+    if (!std::cin)
+        return false;
+
     for (int p = 0; p < numVec; p++) {
         cin >> aux;
         datos.push_back(aux);
