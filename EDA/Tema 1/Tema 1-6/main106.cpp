@@ -1,6 +1,10 @@
 // Mauro Martinez Montes
 // EDA-GDV46
 
+// Resumen de la solucion:
+// Clase de complejidad: O(n)
+// Cuestion: El menor orden de complejidad posible es el O(n * log(n)), ya que el ordenamiento en si tiene un mayor
+// orden que la comparación de listados O(n).
 
 #include <iostream>
 #include <iomanip>
@@ -9,10 +13,56 @@
 using namespace std;
 
 // función que resuelve el problema
-void comparaListados(vector<string> const& eda, vector<string> const& tpv, vector<string>& comunes, 
-                        vector<string>& soloEda, vector<string>& soloTpv) {
+void comparaListados(vector<char> const& eda, vector<char> const& tpv,
+    vector<char>& comunes, vector<char>& soloEda, vector<char>& soloTpv) {
+
+    int edaSize = eda.size() - 1, tpvSize = tpv.size() - 1, contEda = 0, contTpv = 0;
+    char minVec, maxVec;
+
+    if(edaSize >= 0 && tpvSize >= 0)
+    {
+        // sacamos maximos y minimos
+        if (eda[0] > tpv[0]) minVec = tpv[0];
+        else minVec = eda[0];
+        if (eda[edaSize] > tpv[tpvSize]) maxVec = eda[edaSize];
+        else maxVec = tpv[tpvSize];
+
+        //comprobamos los posibles
+        for (char i = minVec; i <= maxVec; i++)
+        {
+            bool EdaHas = false, TpvHas = false;
+
+            // revisamos ambas listas hasta que encontremos la letra o nos la adelantemos
+            if (contEda <= edaSize) {
+                while (eda[contEda] < i && contEda <= edaSize) contEda++;
+                if (eda[contEda] == i) {
+                    EdaHas = true;
+                    contEda++;
+                }
+            }
+
+            if (contTpv <= tpvSize) {
+                while (tpv[contTpv] < i && contTpv < tpvSize) contTpv++;
+                if (tpv[contTpv] == i) {
+                    TpvHas = true;
+                    contTpv++;
+                }
+            }
 
 
+            if (EdaHas && TpvHas)   comunes.push_back(i);
+            if (EdaHas && !TpvHas)  soloEda.push_back(i);
+            if (!EdaHas && TpvHas)  soloTpv.push_back(i);
+        }
+    }
+    else if(edaSize < 0)
+    {
+        soloTpv = tpv;
+    }
+    else if(tpvSize < 0)
+    {
+        soloEda = eda;
+    }
 }
 
 // Resuelve un caso de prueba, leyendo de la entrada la
@@ -21,20 +71,20 @@ void resuelveCaso() {
     // leer los datos de la entrada
     int n;
     cin >> n;
-    vector<string> eda(n);
-    vector<string> comunes;
-    vector<string> soloEda;
-    vector<string> soloTpv;
-    for (string& e : eda) cin >> e;
+    vector<char> eda(n);
+    vector<char> comunes;
+    vector<char> soloEda;
+    vector<char> soloTpv;
+    for (char& e : eda) cin >> e;
     cin >> n;
-    vector<string> tpv(n);
-    for (string& e : tpv) cin >> e;
+    vector<char> tpv(n);
+    for (char& e : tpv) cin >> e;
     comparaListados(eda,tpv,comunes,soloEda,soloTpv);
-    for (string& e : comunes) cout << e << " ";
+    for (char& e : comunes) cout << e << " ";
     cout << endl;
-    for (string& e : soloEda) cout << e << " ";
+    for (char& e : soloEda) cout << e << " ";
     cout << endl;
-    for (string& e : soloTpv) cout << e << " ";
+    for (char& e : soloTpv) cout << e << " ";
     cout << endl;
 }
 
