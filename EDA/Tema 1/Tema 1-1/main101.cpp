@@ -1,6 +1,9 @@
 ﻿// Mauro Martinez Montes
 // EDA-GDV46
 
+// Resumen de la solucion:
+// Clase de complejidad:
+// Cuestion:
 
 #include <iostream>
 #include <iomanip>
@@ -10,10 +13,17 @@
 using namespace std;
 
 // función que resuelve el problema
-bool resolver(vector<int>& datos) {
+bool resolver(vector<int>& dalton) {
+    int dalIndex = dalton.size() - 1;
 
+    if (dalton[0] < dalton[1]) { // Mayor a menor
+        
+    }
+    else if (dalton[0] > dalton[1]) { // Menor a mayor
+    
+    }
 
-    return true;
+    return false;
 }
 
 // Resuelve un caso de prueba, leyendo de la entrada la
