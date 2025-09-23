@@ -16,14 +16,21 @@ using namespace std;
 bool resolver(vector<int>& dalton) {
     int dalIndex = dalton.size() - 1;
 
-    if (dalton[0] < dalton[1]) { // Mayor a menor
-        
+    if (dalton[0] < dalton[1]) { // Orden ascendente
+        for (int i = 0; i < dalIndex; i++)
+        {
+            if (dalton[i] >= dalton[i + 1])  return false;
+        }
     }
-    else if (dalton[0] > dalton[1]) { // Menor a mayor
-    
+    else if (dalton[0] > dalton[1]) { // Orden descendente
+        for (int i = 0; i < dalIndex; i++)
+        {
+            if (dalton[i] <= dalton[i + 1]) return false;
+        }
     }
+    else return false;
 
-    return false;
+    return true;
 }
 
 // Resuelve un caso de prueba, leyendo de la entrada la
