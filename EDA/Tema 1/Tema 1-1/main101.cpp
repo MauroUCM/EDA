@@ -3,7 +3,7 @@
 
 // Resumen de la solucion:
 // Clase de complejidad:
-// Cuestion:
+// Cuestion:8
 
 #include <iostream>
 #include <iomanip>

@@ -141,11 +141,13 @@
     <None Include="Tema 0\Tema 0-7\1.in" />
     <None Include="Tema 1\Tema 1-1\1.ans" />
     <None Include="Tema 1\Tema 1-1\1.in" />
+    <None Include="Tema 1\Tema 1-2\1.ans" />
+    <None Include="Tema 1\Tema 1-2\1.in" />
     <None Include="Tema 1\Tema 1-6\1.ans" />
     <None Include="Tema 1\Tema 1-6\1.in" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Tema 1\Tema 1-1\main101.cpp" />
+    <ClCompile Include="Tema 1\Tema 1-2\main102.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
