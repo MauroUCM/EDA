@@ -12,16 +12,25 @@
 using namespace std;
 
 // función que resuelve el problema
-void resolver(vector<int>& datos, vector<int>& sol) {
+void resolver(vector<int>& datos) {
+    int delNum = 0, index = 0;
 
+    for(int i = 0; i < datos.size(); i++) {
+        if(datos[i] % 2 == 0) {
+            datos[index] = datos[i];
+            index++;
+        }
+        else delNum++;
+    }
 
+    datos.resize(datos.size() - delNum);
 }
 
 // Resuelve un caso de prueba, leyendo de la entrada la
 // configuración, y escribiendo la respuesta
 void resuelveCaso() {
     // leer los datos de la entrada
-    vector<int> datos, sol;
+    vector<int> datos;
     int arrSize, aux;
 
     cin >> arrSize;
@@ -32,10 +41,10 @@ void resuelveCaso() {
         datos.push_back(aux);
     }
 
-    resolver(datos, sol);
+    resolver(datos);
     // escribir sol
 
-    for (int p : sol) cout << p << " ";
+    for (int p : datos) cout << p << " ";
     cout << "\n";
 
 }
