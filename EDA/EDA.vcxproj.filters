@@ -41,9 +41,13 @@
     <None Include="Tema 1\Tema 1-5\1.in" />
     <None Include="Tema 2\Tema 2-10\1.ans" />
     <None Include="Tema 2\Tema 2-10\1.in" />
+    <None Include="Tema 2\Tema 2-14\1.in" />
+    <None Include="Tema 2\Tema 2-14\1.ans" />
+    <None Include="Tema 2\Tema 2-15\1.in" />
+    <None Include="Tema 2\Tema 2-15\1.ans" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Tema 2\Tema 2-10\main210.cpp">
+    <ClCompile Include="Tema 2\Tema 2-15\main215.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>
