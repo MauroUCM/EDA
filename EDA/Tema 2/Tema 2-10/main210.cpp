@@ -18,7 +18,8 @@ int buscaImpar(vector<int> const& datos, int ini, int fin) {
     if (n == 1) return datos[ini];
 
     int mid = (ini + fin) / 2;
-
+    if (datos[mid] % 2 == 1) return datos[mid];
+    
 
     return 5872;
 }
