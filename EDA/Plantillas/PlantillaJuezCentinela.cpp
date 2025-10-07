@@ -37,7 +37,7 @@ int main() {
     // Para la entrada por fichero.
     // Comentar para acepta el reto
     #ifndef DOMJUDGE
-     std::ifstream in("Tema 1/Tema 1-5/1.in");
+     std::ifstream in("Tema 2/Tema 2-5/1.in");
      auto cinbuf = std::cin.rdbuf(in.rdbuf()); //save old buf and redirect std::cin to casos.txt
      #endif 
     

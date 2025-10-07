@@ -6,8 +6,29 @@
 using namespace std;
 
 // función que resuelve el problema
-void comparaListados(vector<string> const& eda, vector<string> const& tpv,
-    vector<string>& comunes, vector<string>& soloEda, vector<string>& soloTpv) {
+void comparaListados(vector<char> const& eda, vector<char> const& tpv,
+    vector<char>& comunes, vector<char>& soloEda, vector<char>& soloTpv) {
+    
+    vector<int> codex;
+    int codSiz = 'z' - 'a' + 1, pijasp = 'z' - 'a';
+
+    codex.resize(codSiz);
+
+    for (int i = 0; i < tpv.size(); i++) {
+        codex[tpv[i] - 'a'] += 1;
+    }
+
+    for (int o = 0; o < eda.size(); o++) {
+        codex[eda[o] - 'a'] += 2;
+    }
+
+    for (int p = 0; p < codex.size(); p++) {
+        if (codex[p] == 1) soloTpv.push_back('a' + p);
+        else if (codex[p] == 2) soloEda.push_back('a' + p);
+        else if (codex[p] == 3) comunes.push_back('a' + p);
+    }
+
+
 
 }
 
@@ -17,20 +38,20 @@ void resuelveCaso() {
     // leer los datos de la entrada
     int n;
     cin >> n;
-    vector<string> eda(n);
-    vector<string> comunes;
-    vector<string> soloEda;
-    vector<string> soloTpv;
-    for (string& e : eda) cin >> e;
+    vector<char> eda(n);
+    vector<char> comunes;
+    vector<char> soloEda;
+    vector<char> soloTpv;
+    for (char& e : eda) cin >> e;
     cin >> n;
-    vector<string> tpv(n);
-    for (string& e : tpv) cin >> e;
+    vector<char> tpv(n);
+    for (char& e : tpv) cin >> e;
     comparaListados(eda, tpv, comunes, soloEda, soloTpv);
-    for (string& e : comunes) cout << e << " ";
+    for (char& e : comunes) cout << e << " ";
     cout << endl;
-    for (string& e : soloEda) cout << e << " ";
+    for (char& e : soloEda) cout << e << " ";
     cout << endl;
-    for (string& e : soloTpv) cout << e << " ";
+    for (char& e : soloTpv) cout << e << " ";
     cout << endl;
 }
 
