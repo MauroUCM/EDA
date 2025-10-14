@@ -51,9 +51,6 @@
     <None Include="Tema 2\Tema 2-2\1.ans" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Tema 1\Tema 1-7\main107.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
     <ClCompile Include="Tema 2\Tema 2-2\main202.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
