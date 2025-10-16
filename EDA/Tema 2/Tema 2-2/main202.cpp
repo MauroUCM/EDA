@@ -13,9 +13,21 @@
 using namespace std;
 
 // función que resuelve el problema
-int Complementario(int datos, int n) {
+int digitoComp(int digito) {
+    return 9 - digito;
+}
 
-    return 1;
+int comp(int n) {
+    if (n <= 9) return digitoComp(n);   // caso base
+    int compResto = comp(n / 10);
+    return compResto * 10 + (digitoComp(n % 10));
+}
+
+int compInv(int n, int acu) {
+    if (n <= 9) return acu * 10 + digitoComp(n);
+    else {
+        return compInv(n / 10, 10 * acu + digitoComp(n % 10));
+    }
 }
 
 // Resuelve un caso de prueba, leyendo de la entrada la
@@ -28,7 +40,7 @@ void resuelveCaso() {
 
 
     // escribir sol
-    cout << Complementario(datos, 0) << endl;
+    cout << comp(datos) << " " << compInv(datos, 0) << endl;
 
 }
 
