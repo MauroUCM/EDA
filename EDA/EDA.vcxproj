@@ -165,9 +165,14 @@
     <None Include="Tema 2\Tema 2-3\1.in" />
     <None Include="Tema 2\Tema 2-3\2.ans" />
     <None Include="Tema 2\Tema 2-3\2.in" />
+    <None Include="Tema 4\Tema 4-6\1.ans" />
+    <None Include="Tema 4\Tema 4-6\1.in" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Tema 2\Tema 2-2\main202.cpp" />
+    <ClInclude Include="Tema 4\Tema 4-6\Set.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Tema 4\Tema 4-6\main406.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

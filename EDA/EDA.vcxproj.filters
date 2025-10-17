@@ -53,9 +53,16 @@
     <None Include="Tema 2\Tema 2-3\1.ans" />
     <None Include="Tema 2\Tema 2-3\2.in" />
     <None Include="Tema 2\Tema 2-3\2.ans" />
+    <None Include="Tema 4\Tema 4-6\1.in" />
+    <None Include="Tema 4\Tema 4-6\1.ans" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Tema 2\Tema 2-2\main202.cpp">
+    <ClInclude Include="Tema 4\Tema 4-6\Set.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Tema 4\Tema 4-6\main406.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>
