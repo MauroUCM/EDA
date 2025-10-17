@@ -128,16 +128,21 @@ public:
     template <class E>
     friend ostream& operator<<(ostream& out, const Set<E>& s);
 
-    int getMax() { return array[nelems - 1]; }
+    // Complejidad O(1)
+    int getMax() { return array[nelems - 1]; }  
 
-    void removeMax() {
-        remove(getMax());
+    // Complejidad O(1)
+    void removeMax() {  
+        nelems--;
     }
 
-    int getMin() { return array[0]; }
+    // Complejidad O(1)
+    int getMin() { return array[0]; }   
 
-    void removeMin() {
-        remove(getMin());
+    // Complejidad O(n(1)) -> O(n)
+    void removeMin() { 
+        shiftLeftFrom(0);
+        nelems--;
     }
 
 protected:
@@ -214,11 +219,9 @@ protected:
 
 template <class T>
 ostream& operator<<(ostream& out, Set<T> const& set) {
-    out << "{";
     for (int i = 0; i < set.nelems-1; i++)
-        out << set.array[i] << ",";
+        out << set.array[i] << " ";
     if (set.nelems > 0) out << set.array[set.nelems-1];
-    out << "}";
     return out;
 }
 

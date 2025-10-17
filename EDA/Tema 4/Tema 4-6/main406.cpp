@@ -14,9 +14,19 @@
 using namespace std;
 
 // función que resuelve el problema
-void resolver(Set<int> datos, int numMenor) {
+// Complejidad: n =Tamaño datos, k = tamaño aux, O(n * k)
+Set<int> resolver(vector<int> datos, int numMenor) {
+    Set<int> aux;
 
+    for (int i : datos) {
+        if (aux.size() < numMenor) aux.add(i);
+        else if (aux.getMax() > i && !aux.contains(i)) {
+            aux.removeMax();
+            aux.add(i);
+        }
+    }
 
+    return aux;
 }
 
 // Resuelve un caso de prueba, leyendo de la entrada la
@@ -24,7 +34,7 @@ void resolver(Set<int> datos, int numMenor) {
 bool resuelveCaso() {
     // leer los datos de la entrada
     int numEl, aux;
-    Set<int> datos;
+    vector<int> datos;
 
     cin >> numEl >> aux;
     
@@ -32,14 +42,13 @@ bool resuelveCaso() {
         return false;
 
     while (aux != -1) {
-        datos.add(aux);
+        datos.push_back(aux);
         cin >> aux;
     }
 
-    
-
     // escribir sol
-    cout << datos << " " << datos.getMin() << " " << datos.getMax() << endl;
+    //cout << datos << " " << datos.getMin() << " " << datos.getMax() << endl;
+    cout << resolver(datos, numEl) << endl;
 
     return true;
 }
