@@ -169,9 +169,11 @@
     <None Include="Tema 4\Tema 4-6\1.in" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="main203.h" />
     <ClInclude Include="Tema 4\Tema 4-6\Set.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="main203.cpp" />
     <ClCompile Include="Tema 4\Tema 4-6\main406.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -60,9 +60,15 @@
     <ClInclude Include="Tema 4\Tema 4-6\Set.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
+    <ClInclude Include="main203.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Tema 4\Tema 4-6\main406.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="main203.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>
