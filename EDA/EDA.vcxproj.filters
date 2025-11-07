@@ -55,21 +55,17 @@
     <None Include="Tema 2\Tema 2-3\2.ans" />
     <None Include="Tema 4\Tema 4-6\1.in" />
     <None Include="Tema 4\Tema 4-6\1.ans" />
+    <None Include="Tema 6\Tema 6-5\1.in" />
+    <None Include="Tema 6\Tema 6-5\1.ans" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Tema 4\Tema 4-6\Set.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="main203.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
+    <ClCompile Include="Tema 6\Tema 6-5\main605.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Tema 4\Tema 4-6\main406.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="main203.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
+    <ClInclude Include="Tema 6\Tema 6-5\bintree_eda.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
