@@ -173,12 +173,12 @@
     <None Include="Tema 6\Tema 6-5\1.in" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Tema 5\Tema 5-13\main513.cpp" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="Tema 5\Tema 5-13\deque_eda.h" />
     <ClInclude Include="Tema 5\Tema 5-13\list_eda.h" />
     <ClInclude Include="Tema 6\Tema 6-5\bintree_eda.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Tema 2\Tema 2-3\main203.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

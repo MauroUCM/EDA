@@ -13,9 +13,17 @@
 using namespace std;
 
 // función que resuelve el problema
-bool resolver(vector<int>* datos) {
+bool resolver(vector<int>* datos, int iniInd, int finInd, int min, int max) {
+
+    if (iniInd - finInd == 1) return true;
+
+    int midaux = ;
+
+    if(resolver(vector<int>* datos, iniInd, finInd))
 
 
+
+    return false;
 }
 
 // Resuelve un caso de prueba, leyendo de la entrada la
@@ -31,7 +39,8 @@ bool resuelveCaso() {
         return false;
 
     
-    if(resolver(&datos))
+    if (resolver(&datos, 0, datos.size(), INT_MIN, INT_MAX)) cout << "SI" << endl;
+    else cout << "NO" << endl;
 
     // escribir sol
 
