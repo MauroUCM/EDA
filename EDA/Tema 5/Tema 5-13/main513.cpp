@@ -4,6 +4,7 @@
 // Resumen de la solucion
 // Clase de complejidad
 // Cuestion: 
+
 #include <iostream>
 #include <iomanip>
 #include <fstream>
@@ -15,7 +16,9 @@ class list_plus : public list<T> {
     using Nodo = typename list<T>::Nodo;
 
 public:
-    void adelantar(...) {}
+    void adelantar(...) {
+    
+    }
 };
 
 
@@ -55,7 +58,7 @@ int main() {
     // Para la entrada por fichero.
     // Comentar para acepta el reto
 #ifndef DOMJUDGE
-    std::ifstream in("input2.txt");
+    std::ifstream in("Tema 5/Tema 5-13/1.in");
     auto cinbuf = std::cin.rdbuf(in.rdbuf()); //save old buf and redirect std::cin to casos.txt
 #endif
 
