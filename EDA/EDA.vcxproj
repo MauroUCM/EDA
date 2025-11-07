@@ -174,9 +174,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Tema 5\Tema 5-13\main513.cpp" />
-    <ClCompile Include="Tema 6\Tema 6-5\main605.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Tema 5\Tema 5-13\deque_eda.h" />
     <ClInclude Include="Tema 5\Tema 5-13\list_eda.h" />
     <ClInclude Include="Tema 6\Tema 6-5\bintree_eda.h" />
   </ItemGroup>
