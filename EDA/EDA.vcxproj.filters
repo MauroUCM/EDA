@@ -57,14 +57,22 @@
     <None Include="Tema 4\Tema 4-6\1.ans" />
     <None Include="Tema 6\Tema 6-5\1.in" />
     <None Include="Tema 6\Tema 6-5\1.ans" />
+    <None Include="Tema 5\Tema 5-13\1.in" />
+    <None Include="Tema 5\Tema 5-13\1.ans" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Tema 6\Tema 6-5\main605.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
+    <ClCompile Include="Tema 5\Tema 5-13\main513.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Tema 6\Tema 6-5\bintree_eda.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="Tema 5\Tema 5-13\list_eda.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
   </ItemGroup>

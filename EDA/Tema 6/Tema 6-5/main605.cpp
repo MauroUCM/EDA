@@ -1,4 +1,10 @@
-﻿
+﻿// Mauro Martinez Montes
+// EDA-GDV46
+
+// Resumen de la solucion: El codigo va escalando el arbol recogiendo los maximos y minimos
+//                          mientras comprueba si se cumplen los requisitos para cada raiz.
+// Clase de complejidad: Lineal, O(n), n siendo el número de de elementos del arbol.
+
 #include <iostream>
 #include <iomanip>
 #include <fstream>
@@ -6,9 +12,16 @@
 #include "bintree_eda.h"
 using namespace std;
 
-bool resuelve(bintree<int> tree) {
+bool resuelve(bintree<int> tree, int min, int max) {
+    if (tree.empty()) return true;
 
-    return true;
+    if (resuelve(tree.left(), min, tree.root())) {
+        if (resuelve(tree.right(), tree.root(), max)) {
+            return tree.root() > min && tree.root() < max;
+        }
+    }
+   
+    return false;
 }
 
 // Resuelve un caso de prueba, leyendo de la entrada la
@@ -18,7 +31,7 @@ bool resuelveCaso() {
 
     bintree<int> tree = leerArbol(int(-1));
     
-    if (resuelve(tree)) cout << "SI" << endl;
+    if (resuelve(tree, INT_MIN, INT_MAX)) cout << "SI" << endl;
     else cout << "NO" << endl;
 
     return true;
