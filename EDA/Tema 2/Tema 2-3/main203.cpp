@@ -13,17 +13,21 @@
 using namespace std;
 
 // función que resuelve el problema
-bool resolver(vector<int>* datos, int iniInd, int finInd, int min, int max) {
+bool resolver(vector<int>& datos, int ini, int fin, int& min, int& max) {
+    if (fin - ini <= 1) {
+        min = max = datos[ini];
+        return true;
+    }
 
-    if (iniInd - finInd == 1) return true;
-
-    int midaux = ;
-
-    if(resolver(vector<int>* datos, iniInd, finInd))
+    int mid = (ini + fin) / 2;
+    int minIzq, minDra, maxIzq, maxDra;
 
 
 
-    return false;
+    bool ordIzq = resolver(datos, ini, mid, min, max);
+    bool ordDra = resolver(datos, mid, fin, min, max);
+
+    return ordDra && ordIzq /*&& maxIzq <= minDra && minIzq >= maxDra*/;
 }
 
 // Resuelve un caso de prueba, leyendo de la entrada la
@@ -31,18 +35,23 @@ bool resolver(vector<int>* datos, int iniInd, int finInd, int min, int max) {
 bool resuelveCaso() {
     // leer los datos de la entrada
     vector<int> datos;
-    int size;
+    int aux, min, max;
 
-    cin >> size;
+    cin >> aux;
 
-    if (size == 0)
+    if (aux == 0)
         return false;
 
-    
-    if (resolver(&datos, 0, datos.size(), INT_MIN, INT_MAX)) cout << "SI" << endl;
-    else cout << "NO" << endl;
+    cin >> aux;
 
-    // escribir sol
+    while (aux != 0) {
+        datos.push_back(aux);
+        cin >> aux;
+    }
+    
+    
+    if (resolver(datos, 0, datos.size(), min, max)) cout << "SI" << endl;
+    else cout << "NO" << endl;
 
     return true;
 }
@@ -56,8 +65,7 @@ int main() {
 #endif 
 
 
-    while (resuelveCaso())
-        ;
+    while (resuelveCaso());
 
 
     // Para restablecer entrada. Comentar para acepta el reto

@@ -74,7 +74,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Tema 7\Tema 7-5\main705.cpp">
+    <ClCompile Include="Tema 2\Tema 2-3\main203.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>
