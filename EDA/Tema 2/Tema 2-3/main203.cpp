@@ -50,8 +50,6 @@ bool resuelveCaso() {
     if (aux == 0)
         return false;
 
-    cin >> aux;
-
     while (aux != 0) {
         datos.push_back(aux);
         cin >> aux;
@@ -63,16 +61,6 @@ bool resuelveCaso() {
 
     return true;
 }
-
-//int devolverMin() {
-//
-//}
-//
-//int devolverMax() {
-//
-//
-//
-//}
 
 int main() {
     // Para la entrada por fichero.
