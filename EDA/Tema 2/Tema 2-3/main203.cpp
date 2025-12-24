@@ -22,15 +22,20 @@ bool resolver(vector<int>& datos, int ini, int fin, int& min, int& max) {
     int mid = (ini + fin) / 2;
     int minIzq, minDra, maxIzq, maxDra;
 
-
-
     bool ordIzq = resolver(datos, ini, mid, min, max);
+    minIzq = min;
+    maxIzq = max;
+
     bool ordDra = resolver(datos, mid, fin, min, max);
+    minDra = min;
+    maxDra = max;
+
+    min = minIzq;
 
     return ordDra 
         && ordIzq 
-/*        && maxDra >= maxIzq 
-        && minIzq <= minDra*/;
+        && maxDra >= maxIzq 
+        && minIzq <= minDra;
 }
 
 // Resuelve un caso de prueba, leyendo de la entrada la
@@ -58,6 +63,16 @@ bool resuelveCaso() {
 
     return true;
 }
+
+//int devolverMin() {
+//
+//}
+//
+//int devolverMax() {
+//
+//
+//
+//}
 
 int main() {
     // Para la entrada por fichero.
