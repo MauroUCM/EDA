@@ -27,7 +27,10 @@ bool resolver(vector<int>& datos, int ini, int fin, int& min, int& max) {
     bool ordIzq = resolver(datos, ini, mid, min, max);
     bool ordDra = resolver(datos, mid, fin, min, max);
 
-    return ordDra && ordIzq /*&& maxIzq <= minDra && minIzq >= maxDra*/;
+    return ordDra 
+        && ordIzq 
+/*        && maxDra >= maxIzq 
+        && minIzq <= minDra*/;
 }
 
 // Resuelve un caso de prueba, leyendo de la entrada la
