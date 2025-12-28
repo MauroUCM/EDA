@@ -23,14 +23,10 @@ bool resolverDisperso(vector<int>* datos, int* valDis, int ini, int fin) {
     int mid = (fin + ini) / 2,
         numDiff = datos->at(ini) - datos->at(fin - 1);
 
-    if (numDiff < 0) {
-        numDiff = -numDiff;
-    }
-
     bool resIzq = resolverDisperso(datos, valDis, ini, mid);
     bool resDra = resolverDisperso(datos, valDis, mid, fin);
 
-    return resIzq && resDra && numDiff >= *valDis;
+    return resIzq && resDra && abs(numDiff) >= *valDis;
 }
 
 // Resuelve un caso de prueba, leyendo de la entrada la
