@@ -14,22 +14,48 @@ using namespace std;
 
 
 // función que resuelve el problema
-bool resolver() {
+bool resolverDisperso(vector<int>* datos, int* valDis, int ini, int fin) {
+    if (fin - ini <= 1) {
 
+        return true;
+    }
 
+    int mid = (fin + ini) / 2,
+        numDiff = datos->at(ini) - datos->at(fin - 1);
+
+    if (numDiff < 0) {
+        numDiff = -numDiff;
+    }
+
+    bool resIzq = resolverDisperso(datos, valDis, ini, mid);
+    bool resDra = resolverDisperso(datos, valDis, mid, fin);
+
+    return resIzq && resDra && numDiff >= *valDis;
 }
 
 // Resuelve un caso de prueba, leyendo de la entrada la
 // configuración, y escribiendo la respuesta
 bool resuelveCaso() {
     // leer los datos de la entrada
+    vector<int> datos;
+    int num, valDis, aux;
+
+    cin >> num;
 
     if (!std::cin)
         return false;
 
+    cin >> valDis;
+
+    for (int i = 0; i < num; i++) {
+        cin >> aux;
+        datos.push_back(aux);
+    }
+
 
     // escribir sol
-
+    if (resolverDisperso(&datos, &valDis, 0, datos.size())) cout << "SI" << endl;
+    else cout << "NO" << endl;
 
     return true;
 }
