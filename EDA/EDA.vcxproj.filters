@@ -89,8 +89,5 @@
     <ClCompile Include="Tema 2\Tema 2-8\main208.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="Tema 2\Tema 2-7\main207.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
   </ItemGroup>
 </Project>

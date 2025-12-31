@@ -13,10 +13,33 @@
 using namespace std;
 
 
+bool estaEnIzq(int ini, int mid, int fin) {
+    if (ini < mid) {
+        return true;
+    }
+
+    return true;
+}
 // función que resuelve el problema
-int resolver(vector<int>* datos, int ini, int fin) {
+int resolverMinimoRotado(vector<int>* datos, int ini, int fin) {
+    int mid = (ini + fin) / 2,
+        iniNum = datos->at(ini),
+        finNum = datos->at(fin - 1),
+        midNum = datos->at(mid);
 
+    if (fin - ini <= 2) {
+        if (iniNum > finNum) return finNum;
+        else return iniNum;
+    }
 
+    if (iniNum < midNum)
+    {
+        return resolverMinimoRotado(datos, ini, mid + 1);
+    }
+    else
+    {
+        return resolverMinimoRotado(datos, mid, fin);
+    }
 }
 
 // Resuelve un caso de prueba, leyendo de la entrada la
@@ -37,7 +60,7 @@ bool resuelveCaso() {
     }
 
     // escribir sol
-    cout << resolver(&datos, 0, datos.size()) << endl;
+    cout << resolverMinimoRotado(&datos, 0, datos.size()) << endl;
 
     return true;
 }
