@@ -157,6 +157,8 @@
     <None Include="Tema 2\Tema 2-10\1.in" />
     <None Include="Tema 2\Tema 2-11\1.ans" />
     <None Include="Tema 2\Tema 2-11\1.in" />
+    <None Include="Tema 2\Tema 2-13\1.ans" />
+    <None Include="Tema 2\Tema 2-13\1.in" />
     <None Include="Tema 2\Tema 2-14\1.ans" />
     <None Include="Tema 2\Tema 2-14\1.in" />
     <None Include="Tema 2\Tema 2-15\1.ans" />
@@ -194,7 +196,7 @@
     <ClInclude Include="Tema 6\Tema 6-5\bintree_eda.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Tema 2\Tema 2-11\main211.cpp" />
+    <ClCompile Include="Tema 2\Tema 2-13\main213.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
