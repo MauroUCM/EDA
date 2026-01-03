@@ -73,6 +73,8 @@
     <None Include="Tema 2\Tema 2-8\1.ans" />
     <None Include="Tema 2\Tema 2-9\1.ans" />
     <None Include="Tema 2\Tema 2-9\1.in" />
+    <None Include="Tema 2\Tema 2-11\1.in" />
+    <None Include="Tema 2\Tema 2-11\1.ans" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Tema 6\Tema 6-5\bintree_eda.h">
@@ -86,7 +88,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Tema 2\Tema 2-10\main210.cpp">
+    <ClCompile Include="Tema 2\Tema 2-11\main211.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>
