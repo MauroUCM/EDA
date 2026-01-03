@@ -13,24 +13,24 @@
 using namespace std;
 
 // función que resuelve el problema
-bool resolver(vector<int>* datos, int* numBuscado, int ini, int fin) {
+bool resolver(vector<int>& datos, int& numBuscado, int ini, int fin) {
     int mid = (ini + fin) / 2,
-        iniNum = datos->at(ini),
-        midNum = datos->at(mid),
-        finNum = datos->at(fin - 1);
+        iniNum = datos[ini],
+        midNum = datos[mid],
+        finNum = datos[fin - 1];
 
     if (fin - ini == 1) {
-        if (datos->at(ini) == *numBuscado) return true;
+        if (datos[ini] == numBuscado) return true;
         else return false;
     }
 
     if (midNum > iniNum) {  // corte en la derecha
-        if (*numBuscado >= iniNum && *numBuscado < midNum) 
+        if (numBuscado >= iniNum && numBuscado < midNum) 
             return resolver(datos, numBuscado, ini, mid);
         else return resolver(datos, numBuscado, mid, fin);
     }
     else {  // corte en la izquierda
-        if (*numBuscado >= midNum && *numBuscado <= finNum) 
+        if (numBuscado >= midNum && numBuscado <= finNum) 
             return resolver(datos, numBuscado, mid, fin);
         else return resolver(datos, numBuscado, ini, mid);
     }
@@ -55,7 +55,7 @@ bool resuelveCaso() {
     }
     
     // escribir sol
-    if (resolver(&datos, &numBuscado, 0, datos.size())) cout << "SI\n";
+    if (resolver(datos, numBuscado, 0, datos.size())) cout << "SI\n";
     else cout << "NO\n";
 
     return true;

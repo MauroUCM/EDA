@@ -17,11 +17,11 @@ int buscaImpar(vector<int> const& datos, int ini, int fin) {
     int n = fin - ini;
     if (n == 1) return datos[ini];
 
-    int mid = (ini + fin) / 2;
-    if (datos[mid] % 2 == 1) return datos[mid];
-    
+    int mitad = (ini + fin) / 2;
 
-    return 5872;
+    if (datos[mitad] % 2 == 1) return datos[mitad];
+    if (datos[ini] + 2 * (mitad - ini) != datos[mitad]) return buscaImpar(datos, ini, mitad);
+    else return buscaImpar(datos, mitad + 1, fin);
 }
 
 // Resuelve un caso de prueba, leyendo de la entrada la
