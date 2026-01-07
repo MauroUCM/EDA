@@ -91,16 +91,16 @@
     <ClInclude Include="Tema 5\Tema 5-13\deque_eda.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="Tema 4\Tema 4-1\Set.h">
+    <ClInclude Include="Tema 4\Tema 4-2\Horas.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Tema 4\Tema 4-1\main401.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
+    <Text Include="Tema 4\Tema 4-1\1.in" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="Tema 4\Tema 4-1\1.in" />
+    <ClCompile Include="Tema 4\Tema 4-2\main402.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
