@@ -78,6 +78,8 @@
     <None Include="Tema 2\Tema 2-13\1.ans" />
     <None Include="Tema 2\Tema 2-13\1.in" />
     <None Include="Tema 4\Tema 4-1\1.ans" />
+    <None Include="Tema 4\Tema 4-2\1.in" />
+    <None Include="Tema 4\Tema 4-2\1.ans" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Tema 6\Tema 6-5\bintree_eda.h">
