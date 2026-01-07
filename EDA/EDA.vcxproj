@@ -181,6 +181,7 @@
     <None Include="Tema 2\Tema 2-8\1.in" />
     <None Include="Tema 2\Tema 2-9\1.ans" />
     <None Include="Tema 2\Tema 2-9\1.in" />
+    <None Include="Tema 4\Tema 4-1\1.ans" />
     <None Include="Tema 4\Tema 4-6\1.ans" />
     <None Include="Tema 4\Tema 4-6\1.in" />
     <None Include="Tema 5\Tema 5-13\1.ans" />
@@ -191,12 +192,16 @@
     <None Include="Tema 7\Tema 7-5\1.in" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Tema 4\Tema 4-1\Set.h" />
     <ClInclude Include="Tema 5\Tema 5-13\deque_eda.h" />
     <ClInclude Include="Tema 5\Tema 5-13\list_eda.h" />
     <ClInclude Include="Tema 6\Tema 6-5\bintree_eda.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Tema 2\Tema 2-13\main213.cpp" />
+    <ClCompile Include="Tema 4\Tema 4-1\main401.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Tema 4\Tema 4-1\1.in" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
