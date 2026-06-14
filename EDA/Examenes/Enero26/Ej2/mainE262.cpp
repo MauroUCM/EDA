@@ -14,8 +14,21 @@ using namespace std;
 
 
 // Complejidad:
-void calcularFlota(bintree<int> const& a) {
+int calcularFlota(bintree<int> const& a, const int& capacidad, int& barcos) {
+    if (a.empty()) {
+        return 0;
+    }
+ 
+    int espLibre = calcularFlota(a.right(), capacidad, barcos) + calcularFlota(a.left(), capacidad, barcos);
 
+    while (espLibre < a.root()) {
+        barcos++;
+        espLibre += capacidad;
+    }
+
+    espLibre -= a.root();
+
+    return espLibre;
 }
 
 
@@ -27,8 +40,9 @@ void resuelveCaso() {
     int capacidad;
     arch = leerArbol(-1);
     cin >> capacidad;
-    calcularFlota(arch);
-    cout << capacidad << endl;
+    int barcos = 0,
+    espacio = calcularFlota(arch, capacidad, barcos);
+    cout << barcos << " " << espacio << endl;
 }
 
 
