@@ -1,10 +1,5 @@
-/*
-Nombre completo:
-DNI:
-Usuario del juez:
-Puesto de laboratorio:
-Qué has conseguido hacer y qué no:
-*/
+// Mauro Martinez Montes
+// EDA-GDV46
 
 #include <iostream>
 #include <iomanip>
@@ -13,7 +8,6 @@ Qué has conseguido hacer y qué no:
 
 using namespace std;
 
-
 template <class T>
 class list_plus : public list<T> {
     using Nodo = typename list<T>::Nodo;
@@ -21,7 +15,11 @@ class list_plus : public list<T> {
 public:
     // Complejidad: 
     list_plus<T> remConsecutiveEq() {
-        // Escribe this->... para acceder a los atributos heredados, por ej. this->nelems
+        list_plus<T> remConscec;
+
+        remConscec.push_back('a');
+
+        return remConscec;
     }
 };
 
@@ -73,7 +71,7 @@ int main() {
     // Para la entrada por fichero.
     // Comentar para acepta el reto
 #ifndef DOMJUDGE
-    std::ifstream in("1.ans");
+    std::ifstream in("Examenes/Enero26/Ej1/1.in");
     auto cinbuf = std::cin.rdbuf(in.rdbuf()); //save old buf and redirect std::cin to casos.txt
 #endif
 

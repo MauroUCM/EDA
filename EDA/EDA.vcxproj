@@ -42,7 +42,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset>v145</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
@@ -129,6 +129,8 @@
   <ItemGroup>
     <None Include="Examenes\Enero26\Ej1\1.ans" />
     <None Include="Examenes\Enero26\Ej1\1.in" />
+    <None Include="Examenes\Enero26\Ej2\1.ans" />
+    <None Include="Examenes\Enero26\Ej2\1.in" />
     <None Include="Tema 0\Tema 0-2\1.ans" />
     <None Include="Tema 0\Tema 0-2\1.in" />
     <None Include="Tema 0\Tema 0-3\1.ans" />
@@ -198,6 +200,14 @@
   <ItemGroup>
     <ClInclude Include="Examenes\Enero26\Ej1\deque_eda.h" />
     <ClInclude Include="Examenes\Enero26\Ej1\list_eda.h" />
+    <ClInclude Include="Examenes\Enero26\Ej2\bintree_eda.h" />
+    <ClInclude Include="Plantillas\Clases\bintree_eda.h" />
+    <ClInclude Include="Plantillas\Clases\deque_eda.h" />
+    <ClInclude Include="Plantillas\Clases\list_eda.h" />
+    <ClInclude Include="Plantillas\Clases\Set.h" />
+    <ClInclude Include="Tema 4\Tema 4-1\Set.h" />
+    <ClInclude Include="Tema 4\Tema 4-2\Horas.h" />
+    <ClInclude Include="Tema 4\Tema 4-6\Set.h" />
     <ClInclude Include="Tema 5\Tema 5-13\deque_eda.h" />
     <ClInclude Include="Tema 5\Tema 5-13\list_eda.h" />
     <ClInclude Include="Tema 6\Tema 6-5\bintree_eda.h" />
@@ -206,7 +216,7 @@
     <Text Include="Tema 4\Tema 4-1\1.in" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Examenes\Enero26\Ej1\mainE261.cpp" />
+    <ClCompile Include="Examenes\Enero26\Ej2\mainE262.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

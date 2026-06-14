@@ -82,6 +82,8 @@
     <None Include="Tema 4\Tema 4-2\1.ans" />
     <None Include="Examenes\Enero26\Ej1\1.in" />
     <None Include="Examenes\Enero26\Ej1\1.ans" />
+    <None Include="Examenes\Enero26\Ej2\1.ans" />
+    <None Include="Examenes\Enero26\Ej2\1.in" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Tema 6\Tema 6-5\bintree_eda.h">
@@ -99,12 +101,36 @@
     <ClInclude Include="Examenes\Enero26\Ej1\deque_eda.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
+    <ClInclude Include="Plantillas\Clases\deque_eda.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="Plantillas\Clases\list_eda.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="Plantillas\Clases\Set.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="Tema 4\Tema 4-2\Horas.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="Tema 4\Tema 4-6\Set.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="Tema 4\Tema 4-1\Set.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="Plantillas\Clases\bintree_eda.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="Examenes\Enero26\Ej2\bintree_eda.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="Tema 4\Tema 4-1\1.in" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Examenes\Enero26\Ej1\mainE261.cpp">
+    <ClCompile Include="Examenes\Enero26\Ej2\mainE262.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>
