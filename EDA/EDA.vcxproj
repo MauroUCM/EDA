@@ -216,7 +216,7 @@
     <Text Include="Tema 4\Tema 4-1\1.in" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Examenes\Enero26\Ej2\mainE262.cpp" />
+    <ClCompile Include="Examenes\Enero26\Ej1\mainE261.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

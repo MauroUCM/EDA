@@ -13,13 +13,35 @@ class list_plus : public list<T> {
     using Nodo = typename list<T>::Nodo;
 
 public:
-    // Complejidad: 
+    // Complejidad: lineal O(n)
     list_plus<T> remConsecutiveEq() {
-        list_plus<T> remConscec;
+        list_plus<T> res;
+        Nodo* act = this->fantasma->sig;
 
-        remConscec.push_back('a');
+        while (act != this->fantasma) {
+            if (act->elem == act->sig->elem) {
+                Nodo* orphanNod = desenlanza(act->sig);
+                enlanza(orphanNod, res.fantasma->ant);
+                res.nelems++;
+            }
+            else act = act->sig;
+        }
 
-        return remConscec;
+        return res;
+    }
+
+    void enlanza(Nodo* node, Nodo* nodeRecep) {
+        node->ant = nodeRecep;
+        node->sig = nodeRecep->sig;
+        node->sig->ant = node;
+        node->ant->sig = node;
+    }
+
+    Nodo* desenlanza(Nodo* node) {
+        node->ant->sig = node->sig;
+        node->sig->ant = node->ant;
+        this->nelems--;
+        return node;
     }
 };
 

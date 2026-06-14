@@ -1,10 +1,5 @@
-/*
-Nombre completo:
-DNI:
-Usuario del juez:
-Puesto de laboratorio:
-Qué has conseguido hacer y qué no: 
-*/
+// Mauro Martinez Montes
+// EDA-GDV46
 
 #include <iostream>
 #include <iomanip>
@@ -13,7 +8,7 @@ Qué has conseguido hacer y qué no:
 using namespace std;
 
 
-// Complejidad:
+// Complejidad: Lineal O(n)
 int calcularFlota(bintree<int> const& a, const int& capacidad, int& barcos) {
     if (a.empty()) {
         return 0;
