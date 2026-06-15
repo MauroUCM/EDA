@@ -140,7 +140,7 @@
     <Text Include="Tema 4\Tema 4-1\1.in" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Examenes\Junio25\Ej1\mainJ251.cpp">
+    <ClCompile Include="Examenes\Enero26\Ej3\mainE262.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>
